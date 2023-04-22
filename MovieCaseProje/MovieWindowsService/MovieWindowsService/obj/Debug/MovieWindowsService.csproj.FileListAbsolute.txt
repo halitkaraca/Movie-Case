@@ -1,0 +1,17 @@
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\MovieWindowsService.exe.config
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\MovieWindowsService.exe
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\MovieWindowsService.pdb
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\EntityFramework.dll
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\EntityFramework.xml
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\obj\Debug\MovieWindowsService.csproj.AssemblyReference.cache
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\obj\Debug\MovieWindowsService.csproj.SuggestedBindingRedirects.cache
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\obj\Debug\MovieWindowsService.csproj.CoreCompileInputs.cache
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\obj\Debug\MovieWindowsService.csproj.CopyComplete
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\obj\Debug\MovieWindowsService.exe
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\obj\Debug\MovieWindowsService.pdb
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\obj\Debug\MovieWindowsService.ProjectInstaller.resources
+C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\obj\Debug\MovieWindowsService.csproj.GenerateResource.cache

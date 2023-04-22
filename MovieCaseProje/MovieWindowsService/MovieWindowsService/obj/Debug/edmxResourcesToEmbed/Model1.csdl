@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MovieCaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Movie_Belongs_To_Collection">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="movie_id" Type="Int32" />
+    <Property Name="id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="poster_path" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="backdrop_path" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Movie_Genres">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="movie_id" Type="Int32" />
+    <Property Name="id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Movie_Production_Companies">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="movie_id" Type="Int32" />
+    <Property Name="id" Type="Int32" />
+    <Property Name="logo_path" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="origin_country" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Movie_Production_Countries">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="movie_id" Type="Int32" />
+    <Property Name="iso_3166_1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Movie_Spoken_Languages">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="movie_id" Type="Int32" />
+    <Property Name="english_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="iso_639_1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MovieList">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" />
+    <Property Name="adult" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="backdrop_path" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="belongs_to_collection" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="budget" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="homepage" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="imdb_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="original_language" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="original_title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="overview" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="popularity" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="poster_path" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="release_date" Type="DateTime" Precision="3" />
+    <Property Name="revenue" Type="Int64" />
+    <Property Name="runtime" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tagline" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="video" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vote_average" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="vote_count" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="MovieCaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Movie_Belongs_To_Collection" EntityType="Self.Movie_Belongs_To_Collection" />
+    <EntitySet Name="Movie_Genres" EntityType="Self.Movie_Genres" />
+    <EntitySet Name="Movie_Production_Companies" EntityType="Self.Movie_Production_Companies" />
+    <EntitySet Name="Movie_Production_Countries" EntityType="Self.Movie_Production_Countries" />
+    <EntitySet Name="Movie_Spoken_Languages" EntityType="Self.Movie_Spoken_Languages" />
+    <EntitySet Name="MovieList" EntityType="Self.MovieList" />
+  </EntityContainer>
+</Schema>

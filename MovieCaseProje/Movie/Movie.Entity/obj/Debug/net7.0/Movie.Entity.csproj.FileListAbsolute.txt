@@ -1,0 +1,12 @@
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\bin\Debug\net7.0\Movie.Entity.deps.json
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\bin\Debug\net7.0\Movie.Entity.dll
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\bin\Debug\net7.0\Movie.Entity.pdb
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\obj\Debug\net7.0\Movie.Entity.csproj.AssemblyReference.cache
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\obj\Debug\net7.0\Movie.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\obj\Debug\net7.0\Movie.Entity.AssemblyInfoInputs.cache
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\obj\Debug\net7.0\Movie.Entity.AssemblyInfo.cs
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\obj\Debug\net7.0\Movie.Entity.csproj.CoreCompileInputs.cache
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\obj\Debug\net7.0\Movie.Entity.dll
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\obj\Debug\net7.0\refint\Movie.Entity.dll
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\obj\Debug\net7.0\Movie.Entity.pdb
+C:\Users\HLTKR\source\repos\Movie\Movie.Entity\obj\Debug\net7.0\ref\Movie.Entity.dll

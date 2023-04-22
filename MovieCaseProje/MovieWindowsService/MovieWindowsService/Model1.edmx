@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MovieCaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Movie_Belongs_To_Collection">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="movie_id" Type="int" />
+          <Property Name="id" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="poster_path" Type="nvarchar" MaxLength="200" />
+          <Property Name="backdrop_path" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Movie_Genres">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="movie_id" Type="int" />
+          <Property Name="id" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Movie_Production_Companies">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="movie_id" Type="int" />
+          <Property Name="id" Type="int" />
+          <Property Name="logo_path" Type="nvarchar" MaxLength="150" />
+          <Property Name="name" Type="nvarchar" MaxLength="150" />
+          <Property Name="origin_country" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Movie_Production_Countries">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="movie_id" Type="int" />
+          <Property Name="iso_3166_1" Type="nvarchar" MaxLength="30" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Movie_Spoken_Languages">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="movie_id" Type="int" />
+          <Property Name="english_name" Type="nvarchar" MaxLength="30" />
+          <Property Name="iso_639_1" Type="nvarchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="MovieList">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id" Type="int" />
+          <Property Name="adult" Type="nvarchar" MaxLength="50" />
+          <Property Name="backdrop_path" Type="nvarchar" MaxLength="100" />
+          <Property Name="belongs_to_collection" Type="nvarchar" MaxLength="50" />
+          <Property Name="budget" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="homepage" Type="nvarchar" MaxLength="200" />
+          <Property Name="imdb_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="original_language" Type="nvarchar" MaxLength="10" />
+          <Property Name="original_title" Type="nvarchar" MaxLength="100" />
+          <Property Name="overview" Type="text" />
+          <Property Name="popularity" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="poster_path" Type="nvarchar" MaxLength="200" />
+          <Property Name="release_date" Type="datetime" />
+          <Property Name="revenue" Type="bigint" />
+          <Property Name="runtime" Type="int" />
+          <Property Name="status" Type="nvarchar" MaxLength="50" />
+          <Property Name="tagline" Type="nvarchar" MaxLength="100" />
+          <Property Name="title" Type="nvarchar" MaxLength="150" />
+          <Property Name="video" Type="nvarchar" MaxLength="200" />
+          <Property Name="vote_average" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="vote_count" Type="int" />
+        </EntityType>
+        <EntityContainer Name="MovieCaseModelStoreContainer">
+          <EntitySet Name="Movie_Belongs_To_Collection" EntityType="Self.Movie_Belongs_To_Collection" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Movie_Genres" EntityType="Self.Movie_Genres" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Movie_Production_Companies" EntityType="Self.Movie_Production_Companies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Movie_Production_Countries" EntityType="Self.Movie_Production_Countries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Movie_Spoken_Languages" EntityType="Self.Movie_Spoken_Languages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MovieList" EntityType="Self.MovieList" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MovieCaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Movie_Belongs_To_Collection">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="movie_id" Type="Int32" />
+          <Property Name="id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="poster_path" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="backdrop_path" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Movie_Genres">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="movie_id" Type="Int32" />
+          <Property Name="id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Movie_Production_Companies">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="movie_id" Type="Int32" />
+          <Property Name="id" Type="Int32" />
+          <Property Name="logo_path" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="origin_country" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Movie_Production_Countries">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="movie_id" Type="Int32" />
+          <Property Name="iso_3166_1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Movie_Spoken_Languages">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="movie_id" Type="Int32" />
+          <Property Name="english_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="iso_639_1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MovieList">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int32" />
+          <Property Name="adult" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="backdrop_path" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="belongs_to_collection" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="budget" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="homepage" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="imdb_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="original_language" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="original_title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="overview" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="popularity" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="poster_path" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="release_date" Type="DateTime" Precision="3" />
+          <Property Name="revenue" Type="Int64" />
+          <Property Name="runtime" Type="Int32" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tagline" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="video" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="vote_average" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="vote_count" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="MovieCaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Movie_Belongs_To_Collection" EntityType="Self.Movie_Belongs_To_Collection" />
+          <EntitySet Name="Movie_Genres" EntityType="Self.Movie_Genres" />
+          <EntitySet Name="Movie_Production_Companies" EntityType="Self.Movie_Production_Companies" />
+          <EntitySet Name="Movie_Production_Countries" EntityType="Self.Movie_Production_Countries" />
+          <EntitySet Name="Movie_Spoken_Languages" EntityType="Self.Movie_Spoken_Languages" />
+          <EntitySet Name="MovieList" EntityType="Self.MovieList" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MovieCaseModelStoreContainer" CdmEntityContainer="MovieCaseEntities">
+          <EntitySetMapping Name="Movie_Belongs_To_Collection">
+            <EntityTypeMapping TypeName="MovieCaseModel.Movie_Belongs_To_Collection">
+              <MappingFragment StoreEntitySet="Movie_Belongs_To_Collection">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="poster_path" ColumnName="poster_path" />
+                <ScalarProperty Name="backdrop_path" ColumnName="backdrop_path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Movie_Genres">
+            <EntityTypeMapping TypeName="MovieCaseModel.Movie_Genres">
+              <MappingFragment StoreEntitySet="Movie_Genres">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Movie_Production_Companies">
+            <EntityTypeMapping TypeName="MovieCaseModel.Movie_Production_Companies">
+              <MappingFragment StoreEntitySet="Movie_Production_Companies">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="logo_path" ColumnName="logo_path" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="origin_country" ColumnName="origin_country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Movie_Production_Countries">
+            <EntityTypeMapping TypeName="MovieCaseModel.Movie_Production_Countries">
+              <MappingFragment StoreEntitySet="Movie_Production_Countries">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+                <ScalarProperty Name="iso_3166_1" ColumnName="iso_3166_1" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Movie_Spoken_Languages">
+            <EntityTypeMapping TypeName="MovieCaseModel.Movie_Spoken_Languages">
+              <MappingFragment StoreEntitySet="Movie_Spoken_Languages">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+                <ScalarProperty Name="english_name" ColumnName="english_name" />
+                <ScalarProperty Name="iso_639_1" ColumnName="iso_639_1" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MovieList">
+            <EntityTypeMapping TypeName="MovieCaseModel.MovieList">
+              <MappingFragment StoreEntitySet="MovieList">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="adult" ColumnName="adult" />
+                <ScalarProperty Name="backdrop_path" ColumnName="backdrop_path" />
+                <ScalarProperty Name="belongs_to_collection" ColumnName="belongs_to_collection" />
+                <ScalarProperty Name="budget" ColumnName="budget" />
+                <ScalarProperty Name="homepage" ColumnName="homepage" />
+                <ScalarProperty Name="imdb_id" ColumnName="imdb_id" />
+                <ScalarProperty Name="original_language" ColumnName="original_language" />
+                <ScalarProperty Name="original_title" ColumnName="original_title" />
+                <ScalarProperty Name="overview" ColumnName="overview" />
+                <ScalarProperty Name="popularity" ColumnName="popularity" />
+                <ScalarProperty Name="poster_path" ColumnName="poster_path" />
+                <ScalarProperty Name="release_date" ColumnName="release_date" />
+                <ScalarProperty Name="revenue" ColumnName="revenue" />
+                <ScalarProperty Name="runtime" ColumnName="runtime" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="tagline" ColumnName="tagline" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="video" ColumnName="video" />
+                <ScalarProperty Name="vote_average" ColumnName="vote_average" />
+                <ScalarProperty Name="vote_count" ColumnName="vote_count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

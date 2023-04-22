@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MovieCaseModelStoreContainer" CdmEntityContainer="MovieCaseEntities">
+    <EntitySetMapping Name="Movie_Belongs_To_Collection">
+      <EntityTypeMapping TypeName="MovieCaseModel.Movie_Belongs_To_Collection">
+        <MappingFragment StoreEntitySet="Movie_Belongs_To_Collection">
+          <ScalarProperty Name="sid" ColumnName="sid" />
+          <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="poster_path" ColumnName="poster_path" />
+          <ScalarProperty Name="backdrop_path" ColumnName="backdrop_path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movie_Genres">
+      <EntityTypeMapping TypeName="MovieCaseModel.Movie_Genres">
+        <MappingFragment StoreEntitySet="Movie_Genres">
+          <ScalarProperty Name="sid" ColumnName="sid" />
+          <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movie_Production_Companies">
+      <EntityTypeMapping TypeName="MovieCaseModel.Movie_Production_Companies">
+        <MappingFragment StoreEntitySet="Movie_Production_Companies">
+          <ScalarProperty Name="sid" ColumnName="sid" />
+          <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="logo_path" ColumnName="logo_path" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="origin_country" ColumnName="origin_country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movie_Production_Countries">
+      <EntityTypeMapping TypeName="MovieCaseModel.Movie_Production_Countries">
+        <MappingFragment StoreEntitySet="Movie_Production_Countries">
+          <ScalarProperty Name="sid" ColumnName="sid" />
+          <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+          <ScalarProperty Name="iso_3166_1" ColumnName="iso_3166_1" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movie_Spoken_Languages">
+      <EntityTypeMapping TypeName="MovieCaseModel.Movie_Spoken_Languages">
+        <MappingFragment StoreEntitySet="Movie_Spoken_Languages">
+          <ScalarProperty Name="sid" ColumnName="sid" />
+          <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+          <ScalarProperty Name="english_name" ColumnName="english_name" />
+          <ScalarProperty Name="iso_639_1" ColumnName="iso_639_1" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovieList">
+      <EntityTypeMapping TypeName="MovieCaseModel.MovieList">
+        <MappingFragment StoreEntitySet="MovieList">
+          <ScalarProperty Name="sid" ColumnName="sid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adult" ColumnName="adult" />
+          <ScalarProperty Name="backdrop_path" ColumnName="backdrop_path" />
+          <ScalarProperty Name="belongs_to_collection" ColumnName="belongs_to_collection" />
+          <ScalarProperty Name="budget" ColumnName="budget" />
+          <ScalarProperty Name="homepage" ColumnName="homepage" />
+          <ScalarProperty Name="imdb_id" ColumnName="imdb_id" />
+          <ScalarProperty Name="original_language" ColumnName="original_language" />
+          <ScalarProperty Name="original_title" ColumnName="original_title" />
+          <ScalarProperty Name="overview" ColumnName="overview" />
+          <ScalarProperty Name="popularity" ColumnName="popularity" />
+          <ScalarProperty Name="poster_path" ColumnName="poster_path" />
+          <ScalarProperty Name="release_date" ColumnName="release_date" />
+          <ScalarProperty Name="revenue" ColumnName="revenue" />
+          <ScalarProperty Name="runtime" ColumnName="runtime" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="tagline" ColumnName="tagline" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="video" ColumnName="video" />
+          <ScalarProperty Name="vote_average" ColumnName="vote_average" />
+          <ScalarProperty Name="vote_count" ColumnName="vote_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

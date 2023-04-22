@@ -1,0 +1,13 @@
+﻿'C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\MovieWindowsService.exe' derlemesi yükleniyor.
+Etkilenen parametreler şunlardır:
+   logtoconsole = 
+   assemblypath = C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\MovieWindowsService.exe
+   logfile = C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\MovieWindowsService.InstallLog
+MovieWindowsService hizmeti yükleniyor...
+MovieWindowsService hizmeti başarıyla yüklendi.
+Application günlüğünde MovieWindowsService EventLog kaynağı oluşturuluyor...
+'C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\MovieWindowsService.exe' derlemesi tamamlanıyor.
+Etkilenen parametreler şunlardır:
+   logtoconsole = 
+   assemblypath = C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\MovieWindowsService.exe
+   logfile = C:\Users\HLTKR\source\repos\MovieWindowsService\MovieWindowsService\bin\Debug\MovieWindowsService.InstallLog
